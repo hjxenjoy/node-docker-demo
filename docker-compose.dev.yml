@@ -10,4 +10,13 @@ services:
       - /usr/src/app/node_modules
     environment:
       - NODE_ENV=development
+      - MONGO_USER=hjxenjoy
+      - MONGO_PASSWORD=enjoypwd
+      - SESSION_SECRET=secret
     command: npm run dev
+
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=hjxenjoy
+      - MONGO_INITDB_ROOT_PASSWORD=enjoypwd
+
