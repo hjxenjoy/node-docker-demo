@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const redis = require('redis');
+const cors = require('cors');
 const RedisStore = require('connect-redis')(session);
 
 const { MONGO_USER, MONGO_PASSWORD, MONGO_IP, MONGO_PORT, REDIS_URL, REDIS_PORT, SESSION_SECRET } = require('./config/config');
@@ -40,6 +41,9 @@ function connectWithRetry() {
 
 connectWithRetry();
 
+app.enable('trust proxy');
+app.use(cors({}));
+
 app.use(session({
   store: new RedisStore({
     client: redisClient,
@@ -57,6 +61,7 @@ app.use(session({
 app.use(express.json());
 
 app.get('/', (req, res) => {
+  console.log('yeah it ran');
   res.send('<h1>Hello World.</h1>');
 });
 

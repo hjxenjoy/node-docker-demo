@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   bcryptjs: ^2.4.3
   connect-redis: ^6.0.0
+  cors: ^2.8.5
   express: ^4.17.1
   express-session: ^1.17.2
   mongoose: ^5.13.0
@@ -12,6 +13,7 @@ specifiers:
 dependencies:
   bcryptjs: 2.4.3
   connect-redis: 6.0.0
+  cors: 2.8.5
   express: 4.17.1
   express-session: 1.17.2
   mongoose: 5.13.0
@@ -292,6 +294,14 @@ packages:
 
   /core-util-is/1.0.2:
     resolution: {integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=}
+    dev: false
+
+  /cors/2.8.5:
+    resolution: {integrity: sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==}
+    engines: {node: '>= 0.10'}
+    dependencies:
+      object-assign: 4.1.1
+      vary: 1.1.2
     dev: false
 
   /crypto-random-string/2.0.0:
@@ -920,6 +930,11 @@ packages:
     resolution: {integrity: sha512-9UZCFRHQdNrfTpGg8+1INIg93B6zE0aXMVFkw1WFwvO4SlZywU6aLg5Of0Ap/PgcbSw4LNxvMWXMeugwMCX0AA==}
     engines: {node: '>=8'}
     dev: true
+
+  /object-assign/4.1.1:
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /on-finished/2.3.0:
     resolution: {integrity: sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=}
