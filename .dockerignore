@@ -1,0 +1,9 @@
+node_modules
+Dockerfile
+.dockerignore
+.gitignore
+.git
+.idea
+npm-debug.log
+docker-compose*
+pnpm*
